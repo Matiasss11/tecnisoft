@@ -15,6 +15,11 @@ class CreateContratosTable extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->id();
+            $table->date('fecha_expiracion');
+            $table->unsignedBigInteger('personal_id');
+            $table->foreign('personal_id')->references('id')->on('personal')->onDelete('restrict');
+            $table->unsignedBigInteger('tipo_contratacion_id');
+            $table->foreign('tipo_contratacion_id')->references('id')->on('tipo_contrataciones')->onDelete('restrict');
             $table->timestamps();
         });
     }

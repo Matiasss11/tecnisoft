@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTipoContratacionsTable extends Migration
+class CreateDomiciliosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class CreateTipoContratacionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_contratacions', function (Blueprint $table) {
+        Schema::create('domicilios', function (Blueprint $table) {
             $table->id();
+            $table->string('altura');
+            $table->string('calle');
+            $table->string('piso');
+            $table->unsignedBigInteger('ciudad_id');
+            $table->foreign('ciudad_id')->references('id')->on('ciudades')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateTipoContratacionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_contratacions');
+        Schema::dropIfExists('domicilios');
     }
 }

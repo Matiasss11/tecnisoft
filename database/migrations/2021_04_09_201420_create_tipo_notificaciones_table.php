@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePeriodoInscripcionsTable extends Migration
+class CreateTipoNotificacionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreatePeriodoInscripcionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('periodo_inscripcions', function (Blueprint $table) {
+        Schema::create('tipo_notificaciones', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreatePeriodoInscripcionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('periodo_inscripcions');
+        Schema::dropIfExists('tipo_notificacions');
     }
 }

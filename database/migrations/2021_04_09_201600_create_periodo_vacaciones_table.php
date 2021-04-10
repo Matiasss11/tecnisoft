@@ -15,6 +15,7 @@ class CreatePeriodoVacacionesTable extends Migration
     {
         Schema::create('periodo_vacaciones', function (Blueprint $table) {
             $table->id();
+            $table->string('periodo');
             $table->timestamps();
         });
     }

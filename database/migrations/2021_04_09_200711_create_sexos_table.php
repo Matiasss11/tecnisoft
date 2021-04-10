@@ -15,6 +15,8 @@ class CreateSexosTable extends Migration
     {
         Schema::create('sexos', function (Blueprint $table) {
             $table->id();
+            $table->string('abreviatura');
+            $table->string('definicion');
             $table->timestamps();
         });
     }

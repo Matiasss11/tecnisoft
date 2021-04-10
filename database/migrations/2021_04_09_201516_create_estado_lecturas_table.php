@@ -15,6 +15,8 @@ class CreateEstadoLecturasTable extends Migration
     {
         Schema::create('estado_lecturas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
