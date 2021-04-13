@@ -15,6 +15,10 @@ class CreateEmpleadosTable extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
+            $table->string('codigo_empleado');
+            $table->boolean('conduce');
+            $table->unsignedBigInteger('personal_id');
+            $table->foreign('personal_id')->references('id')->on('personal')->onDelete('restrict');
             $table->timestamps();
         });
     }

@@ -15,6 +15,8 @@ class EstadoInscripcion extends Model
         'nombre', 'descripcion'
     ];
 
+    protected $table = 'estado_inscripciones';
+
     /**
      * Get all of the comments for the EstadoInscripcion
      *
