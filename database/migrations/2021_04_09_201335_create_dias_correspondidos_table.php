@@ -16,7 +16,7 @@ class CreateDiasCorrespondidosTable extends Migration
         Schema::create('dias_correspondidos', function (Blueprint $table) {
             $table->id();
             $table->string('año_desde');
-            $table->string('año_hasta');
+            $table->string('año_hasta')->nullable();
             $table->string('cantidad_dias');
             $table->timestamps();
         });

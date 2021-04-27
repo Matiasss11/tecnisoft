@@ -17,6 +17,9 @@ class DatabaseSeeder extends Seeder
         $this->call(DomicilioSeeder::class);
         $this->call(TipoContratacionSeeder::class);
         $this->call(EstadoVacacionesSeeder::class);
+        $this->call(DiasCorrespondidosSeeder::class);
+
+        
 
     }
 }
