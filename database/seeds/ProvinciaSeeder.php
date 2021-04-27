@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Provincia;
 class ProvinciaSeeder extends Seeder
 {
     /**
@@ -11,6 +11,16 @@ class ProvinciaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Provincia::create([
+            'nombre'    =>  'Misiones'
+        ]);
+
+        Provincia::create([
+            'nombre'    =>  'Corrientes'
+        ]);
+
+        Provincia::create([
+            'nombre'    =>  'Entre Rios'
+        ]);
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\EstadoVacacion;
 class EstadoVacacionesSeeder extends Seeder
 {
     /**
@@ -11,6 +11,14 @@ class EstadoVacacionesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        EstadoVacacion::create([
+            'nombre'         => 'Vigente',
+            'descripcion'    => 'Actualmente en vacaciones'
+        ]);
+        EstadoVacacion::create([
+            'nombre'         => 'No Vigente',
+            'descripcion'    => 'Actualmente no está en vacaciones'
+        ]);
+        
     }
 }

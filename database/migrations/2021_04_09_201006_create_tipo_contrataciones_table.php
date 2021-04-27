@@ -16,7 +16,7 @@ class CreateTipoContratacionesTable extends Migration
         Schema::create('tipo_contrataciones', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('descripciones');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }

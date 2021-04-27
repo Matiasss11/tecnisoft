@@ -12,7 +12,7 @@ class Domicilio extends Model
      * @var array
      */
     protected $fillable = [
-        'altura', 'calle', 'piso', 'ciudades'
+        'altura', 'calle', 'piso', 'ciudad_id'
     ];
 
     public function ciudad()

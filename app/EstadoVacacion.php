@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EstadoVacaciones extends Model
+class EstadoVacacion extends Model
 {
     /**
      * The attributes that are mass assignable.

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Sexo;
 class SexoSeeder extends Seeder
 {
     /**
@@ -11,6 +11,14 @@ class SexoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Sexo::create([
+            'abreviatura'   =>  'M',
+            'definicion'    =>  'masculino'
+        ]);
+
+        Sexo::create([
+            'abreviatura'   =>  'F',
+            'definicion'    =>  'femenino'
+        ]);
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Ciudad;
 class CiudadSeeder extends Seeder
 {
     /**
@@ -11,6 +11,17 @@ class CiudadSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Ciudad::create([
+            'nombre'        =>  'Posadas',
+            'codigo_postal' =>  '3300',
+            'provincia_id' =>  '1' //Misiones
+        ]);
+
+
+        Ciudad::create([
+            'nombre'        =>  'Obera',
+            'codigo_postal' =>  '3400',
+            'provincia_id' =>  '1' //Misiones
+        ]);
     }
 }
