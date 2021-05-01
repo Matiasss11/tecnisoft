@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TipoContratacionSeeder::class);
         $this->call(EstadoVacacionesSeeder::class);
         $this->call(DiasCorrespondidosSeeder::class);
+        $this->call(CreateAdminUserSeeder::class);
+        $this->call(PermissionTableSeeder::class);
 
         
 

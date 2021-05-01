@@ -20,3 +20,21 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware(['auth'])->group(function() {
+    //include 'rutas/Home.php';
+    include 'rutas/TipoSexo.php';
+    include 'rutas/User.php';
+    include 'rutas/Roles.php';
+    include 'rutas/Audit.php';
+    include 'rutas/Configuracion.php';
+    include 'rutas/TipoDocumento.php';
+    include 'rutas/Personal.php';
+    include 'rutas/Agenda.php';
+    include 'rutas/Pais.php';
+    include 'rutas/Provincia.php';
+    include 'rutas/Ciudad.php';
+    include 'rutas/Perfil.php';
+    include 'rutas/Email.php';
+
+});
