@@ -21,7 +21,7 @@ class CreatePeriodoInscripcionTable extends Migration
             $table->date('fecha_vacacion_desde');
             $table->date('fecha_vacacion_hasta');
             $table->unsignedBigInteger('personal_id');
-            $table->foreign('personal_id')->references('id')->on('personal')->onDelete('restrict');
+            $table->foreign('personal_id')->references('id')->on('personales')->onDelete('restrict');
             $table->unsignedBigInteger('periodo_vacacion_id');
             $table->foreign('periodo_vacacion_id')->references('id')->on('periodo_vacaciones')->onDelete('restrict');
             $table->timestamps();
