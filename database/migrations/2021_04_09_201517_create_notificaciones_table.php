@@ -18,7 +18,7 @@ class CreateNotificacionesTable extends Migration
             $table->string('mensaje');
             $table->date('visto');
             $table->unsignedBigInteger('personal_id');
-            $table->foreign('personal_id')->references('id')->on('personal')->onDelete('restrict');
+            $table->foreign('personal_id')->references('id')->on('personales')->onDelete('restrict');
             $table->unsignedBigInteger('estado_lectura_id');
             $table->foreign('estado_lectura_id')->references('id')->on('estado_lecturas')->onDelete('restrict');
             $table->unsignedBigInteger('tipo_notificacion_id');

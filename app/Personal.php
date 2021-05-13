@@ -6,6 +6,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Personal extends Model
 {
+
+    protected $fillable = [
+        'dni',                   
+        'nombre',                
+        'apellido',              
+        'fecha_nacimiento',      
+        'telefono',              
+        'email',                 
+        'fecha_alta',            
+        'cuil',                  
+        'sexo_id',               
+        'domicilio_id',          
+        'estado_vacacion_id',    
+        'estado_vacacion_id',    
+        'dias_correspondido_id', 
+    ];
+
     public function tipoDocumento()
     {
         return $this->belongsTo(TipoDocumento::class);

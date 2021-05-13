@@ -18,7 +18,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('codigo_empleado');
             $table->boolean('conduce');
             $table->unsignedBigInteger('personal_id');
-            $table->foreign('personal_id')->references('id')->on('personal')->onDelete('restrict');
+            $table->foreign('personal_id')->references('id')->on('personales')->onDelete('restrict');
             $table->timestamps();
         });
     }

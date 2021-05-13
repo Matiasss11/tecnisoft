@@ -20,7 +20,7 @@ class CreateInscripcionVacacionesTable extends Migration
             $table->unsignedBigInteger('estado_inscripcion_id');
             $table->foreign('estado_inscripcion_id')->references('id')->on('estado_inscripciones')->onDelete('restrict');
             $table->unsignedBigInteger('personal_id');
-            $table->foreign('personal_id')->references('id')->on('personal')->onDelete('restrict');
+            $table->foreign('personal_id')->references('id')->on('personales')->onDelete('restrict');
             $table->unsignedBigInteger('periodo_inscripcion_id');
             $table->foreign('periodo_inscripcion_id')->references('id')->on('periodo_inscripciones')->onDelete('restrict');
             $table->timestamps();
